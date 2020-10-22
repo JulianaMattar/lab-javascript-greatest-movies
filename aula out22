@@ -1,0 +1,106 @@
+// MAP
+
+// const cities = ['florianópolis', 'miami', 'dublin', 'barcelona']
+
+// const resultArr = cities.map(function(city) {
+// const firstLetter= city[0].toUpperCase();
+// const restOfWord = city.slice(1);
+// return firstLetter + restOfWord;
+// })
+
+// resultArr
+
+// REDUCE
+
+// const numbers = [3, 4, 5, 2, 7, 5]
+
+// numbers.reduce((accumulator, currentValue) => {
+// return accumulator + currentValue;
+// })
+
+// FOR EACH
+
+// let acc = 0
+
+// numbers.forEach((number) => {
+// acc = acc + number;
+// })
+
+// acc
+
+// FILTER
+
+const numbers = [3, 4, 5, 2, 7, 5]
+
+// const even = numbers.filter((currentNumber) => { 
+// const isEven = currentNumber % 2 === 0;
+// console.log(isEven);
+// });
+
+const even = numbers.filter((currentNumber) => { 
+const isEven = currentNumber % 2 === 0;
+return isEven;
+});
+
+even
+
+const students = [
+{name: 'Rodrigo', city: 'Rio de Janeiro'},
+{name: 'Hector', city: 'Oxford'},
+{name: 'Vitor', city: 'SP'},
+{name: 'Laura', city: 'SP'}
+]
+// isso não é uma lista, é um dicionário, o que importa é o identificador, não a localizaçao dentro do array
+
+const SPresidents = students.filter((currentStudent) => { 
+const livesInSP = currentStudent.city === 'SP';
+return livesInSP;
+}).map((currentStudent) => {
+return currentStudent.name;
+});
+
+// para acessar objs tb pode ser currentStudent['city']
+
+// sem o map, volta o obj inteiro. com o map volta só o valor que a gente pediu (name)
+
+SPresidents
+
+// o valor de retorno de .filter e .map é array
+
+// SORT
+
+// O sort só ordena uma array por um determinado critério (meio esquisito - ordena pelo código ASCII - que sao ordem alfabetica mas maiusculas vem antes de minusculas). por padrão, ele transf em string e ordena pelo ascii - numeros nao ficam na ordem de valor.
+
+const fruits = ['watermelon', 'banana', 'apple', 'pineapple'];
+
+// fruits.sort();
+
+const nums = [32, 4, 5, 0, 12];
+
+nums.sort()
+
+// com a funcao callback dá pra ordenar por ordem de valor crescente ou decrescente:
+
+nums.sort(function (a, b) {
+return a - b;
+})
+
+nums.sort(function (a, b) {
+return b - a;
+})
+
+// a = numero atual; b = próximo numero (nao funciona com strings)
+
+// REVERSE (faz o contrário do SORT), mas precisa que a array esteja ordenada pra fazer sentido de valores; otherwise faz um espelho da array original.
+
+nums.reverse()
+
+
+
+  
+    
+    
+
+
+
+
